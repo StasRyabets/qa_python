@@ -49,7 +49,7 @@ class TestBooksCollector:
         collector.add_new_book(second_book_in_list)
         collector.set_book_genre(first_book_in_list, genre)
         collector.set_book_genre(second_book_in_list, genre)
-        assert collector.get_books_with_specific_genre(genre) == [first_book_in_list, second_book_in_list]
+        assert collector.get_books_with_specific_genre(genre) == [first_book_in_list, second_book_in_list], "get_books_with_specific_genre вернул НЕ две книги с подходящим жанром"
 
     def test_get_books_genre_two_books_with_different_genre(self):
         collector = BooksCollector()
