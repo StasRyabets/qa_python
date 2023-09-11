@@ -87,7 +87,7 @@ class TestBooksCollector:
         collector.add_new_book(book_name)
         collector.add_book_in_favorites(book_name)
         collector.delete_book_from_favorites(book_name)
-        assert len(collector.get_list_of_favorites_books) == 0, "get_list_of_favorites_books вернул не пустой список после delete_book_from_favorites"
+        assert collector.get_list_of_favorites_books() == [], "get_list_of_favorites_books вернул не пустой список после delete_book_from_favorites"
 
     def test_get_list_of_favorites_books_one_existing_favorite(self):
         collector = BooksCollector()
