@@ -61,7 +61,7 @@ class TestBooksCollector:
         collector.add_new_book(second_book)
         collector.set_book_genre(first_book, first_genre)
         collector.set_book_genre(second_book, second_genre)
-        assert collector.get_books_genre() == collector.books_genre
+        assert collector.get_books_genre() == collector.books_genre, "get_books_genre вернул не те значения что добавлялись add_new_book и set_book_genre"
 
     def test_get_books_for_children_add_two_return_one(self):
         collector = BooksCollector()
