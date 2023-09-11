@@ -14,7 +14,7 @@ class TestBooksCollector:
         book_name = 'Гордость и предубеждение и зомби'
         collector.add_new_book(book_name)
         collector.add_new_book(book_name)
-        assert len(collector.get_books_genre()) == 1
+        assert len(collector.get_books_genre()) == 1, "get_books_genre вернул НЕ одну книгу"
 
     @pytest.mark.parametrize('book_name', ["Г" * 41, ""])
     def test_add_new_book_name_not_match_requirements(self, book_name):
