@@ -28,7 +28,7 @@ class TestBooksCollector:
         genre = "Фантастика"
         collector.add_new_book(book_name)
         collector.set_book_genre(book_name, genre)
-        assert collector.books_genre[book_name] == genre
+        assert collector.get_book_genre(book_name) == genre, "get_book_genre вернул не тот жанр что был передан в set_book_genre"
 
     def test_set_book_genre_nonexisting_genre(self):
         collector = BooksCollector()
