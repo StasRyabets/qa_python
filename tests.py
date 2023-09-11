@@ -20,7 +20,7 @@ class TestBooksCollector:
     def test_add_new_book_name_not_match_requirements(self, book_name):
         collector = BooksCollector()
         collector.add_new_book(book_name)
-        assert len(collector.books_genre) == 0
+        assert len(collector.get_books_genre()) == 0, "add_new_book добавил книгу с некорректным названием"
     
     def test_set_book_genre_existing_book(self):
         collector = BooksCollector()
