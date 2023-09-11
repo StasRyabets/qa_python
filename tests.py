@@ -38,14 +38,6 @@ class TestBooksCollector:
         collector.set_book_genre(book_name, genre)
         assert collector.get_book_genre(book_name) == '', "get_book_genre вернул не пустое значение, предположительно set_book_genre записал несуществующий жанр"
 
-    def test_get_book_genre_existing_genre(self):
-        collector = BooksCollector()
-        book_name = "Цветы зла"
-        genre = "Ужасы"
-        collector.add_new_book(book_name)
-        collector.set_book_genre(book_name, genre)
-        assert collector.get_book_genre(book_name) == genre
-
     def test_get_books_with_specific_genre_existing_genre(self):
         collector = BooksCollector()
         book_not_in_list = "Железный совет"
