@@ -79,7 +79,7 @@ class TestBooksCollector:
         collector.add_new_book(book_name)
         collector.add_book_in_favorites(book_name)
         collector.add_book_in_favorites(book_name)
-        assert len(collector.favorites) == 1
+        assert len(collector.get_list_of_favorites_books()) == 1, "get_list_of_favorites_books вернул НЕ одну книгу"
 
     def test_delete_book_from_favorites_add_then_remove(self):
         collector = BooksCollector()
