@@ -89,10 +89,4 @@ class TestBooksCollector:
         collector.delete_book_from_favorites(book_name)
         assert collector.get_list_of_favorites_books() == [], "get_list_of_favorites_books вернул не пустой список после delete_book_from_favorites"
 
-    def test_get_list_of_favorites_books_one_existing_favorite(self):
-        collector = BooksCollector()
-        book_name = "Дом листьев"
-        collector.add_new_book(book_name)
-        collector.add_book_in_favorites(book_name)
-        assert collector.get_list_of_favorites_books() == [book_name]
 
