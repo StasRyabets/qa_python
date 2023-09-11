@@ -71,7 +71,7 @@ class TestBooksCollector:
         collector.add_new_book(book_name)
         collector.add_new_book(book_in_list)
         collector.set_book_genre(book_in_list, genre)
-        assert collector.get_books_for_children() == [book_in_list]
+        assert collector.get_books_for_children() == [book_in_list], "get_books_for_children отфильтровал неправильно"
 
     def test_add_book_in_favorites_add_existing_book_two_times(self):
         collector = BooksCollector()
